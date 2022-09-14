@@ -6,7 +6,7 @@
 
 _by Sidar Aliaksei_
 
-**_[Back-end part (Node.js)]()_**
+**_[Back-end part (Node.js)](https://github.com/aliakseisidar/URLShortener_server)_**
 
 ---
 
