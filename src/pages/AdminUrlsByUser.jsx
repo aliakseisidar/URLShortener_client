@@ -41,12 +41,12 @@ function AdminUrlsByUser() {
     <div className="App">
       {errorFetchURLs && (
         <MySnakbarError>
-          URLs are not loaded because of: {errorFetchURLs}
+          {`URLs are not loaded because of: ${errorFetchURLs}`}
         </MySnakbarError>
       )}
       {errorDeleteURL && (
         <MySnakbarError>
-          URL is not deleted because of "{errorDeleteURL}"
+          {`URL is not deleted because of "${errorDeleteURL}"`}
         </MySnakbarError>
       )}
       {isLoadingFetchURLs ? (

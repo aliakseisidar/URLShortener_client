@@ -52,12 +52,12 @@ function Search() {
       )}
       {errorSearchURLs && (
         <MySnakbarError>
-          URLs are not loaded because of: {errorSearchURLs}
+          {`URLs are not loaded because of: ${errorSearchURLs}`}
         </MySnakbarError>
       )}
       {errorDeleteURL && (
         <MySnakbarError>
-          URL is not deleted because of "{errorDeleteURL}"
+          {`URL is not deleted because of "${errorDeleteURL}"`}
         </MySnakbarError>
       )}
       {isLoadingSearchURLs ? (

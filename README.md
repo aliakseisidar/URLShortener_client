@@ -2,7 +2,7 @@
 
 ---
 
-### "URL Shortener" learning project (**Front-end part - React JS**)
+### "URL Shortener" learning project (e2e automation)
 
 _by Sidar Aliaksei_
 
@@ -10,46 +10,111 @@ _by Sidar Aliaksei_
 
 ---
 
+To srart app:
+
+```
+npm start
+```
+
+To srart tests:
+
+```
+npx wdio run ./wdio.conf.js
+```
+
+---
+
 #### Library used:
 
-- React Router Dom v.6
-- React Hook Form
-- React Infinite Scroll Component
-- Material UI
-- Axios
+- WebDriverIO
+- Allure Reporter
 - etc.
 
 ---
 
-## Short description of main features:
+#### Scenarios:
 
-#### Admin can:
+<details>
+  <summary>Sign In (positive)</summary>
 
-- see list of all users (includes other admins);
-- search users by username - autocomplete field;
-- edit user atributes - username, rassword, role;
-- delete user;
-- view URLs of each user;
-- view page with details of each URL;
-- manage (add/delete) tags of each URL;
-- delete any URL.
-- ...
+### Before:
 
-#### Authorized user can:
+1. no
 
-- create short link with Title and tag(s);
-- see list of his/her own URLs
-- search URL(s) by title - search field;
-- search URL(s) by tag - click on the tag;
-- view page with details of each URL;
-- manage (add/delete) tags of each URL;
-- delete his/her own URLs URL.
-- ...
+### Steps:
 
-#### Unauthorized user can:
+1. Open Login page.
+2. Fill Sign Uo form.
+3. Click Sing Up.
+4. Click Log Out.
 
-- use any short link created by any other user;
-- sign up in system.
-- ...
+### After:
 
----
+1. Delete a user.
+
+## </details>
+
+<details>
+  <summary>User flow (Happy Path)</summary>
+  
+### Before:
+
+1. Sign Up a new user
+
+### Steps:
+
+1. Open LogIn page.
+2. Fill LogIn form.
+3. Click LogIn.
+4. Short any URL (wiki/google/github)
+5. View the URL details.
+6. Add tag to the URL.
+7. Try the URL.
+8. Delete the URL.
+
+### After:
+
+1. Delete a user.
+
+## </details>
+
+<details>
+  <summary>Search by Title/Tag</summary>
+  
+### Before:
+
+1. Sign Up a new user
+2. Add some URLs.
+
+### Steps:
+
+1. Open LogIn page.
+2. Fill Search input with valid Title.
+3. Click on Tag.
+
+### After:
+
+1. Delete a user.
+2. Delete all his URLs.
+
+## </details>
+
+<details>
+  <summary>Admin flow (Happy Path)</summary>
+  
+### Before:
+
+1. Sign Up a new user
+2. Add some URLs.
+3. Sign In as admin (predefined)
+
+### Steps:
+
+1. Change user
+2. Delete user
+
+### After:
+
+1.
+
+## </details>
