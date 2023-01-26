@@ -10,6 +10,14 @@ _by Sidar Aliaksei_
 
 ---
 
+To srart app:
+
+```
+npm start
+```
+
+---
+
 #### Library used:
 
 - React Router Dom v.6
