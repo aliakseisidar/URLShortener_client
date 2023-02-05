@@ -11,10 +11,18 @@
     "plugin:mocha/recommended"
   ],
   "overrides": [],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
   },
   "plugins": ["react", "wdio", "mocha"],
-  "rules": { "react/prop-types": "off", "no-unused-vars": "warn" }
+  "rules": {
+    "react/prop-types": "off",
+    "no-unused-vars": "warn",
+    "wdio/no-pause": "warn"
+  }
 }
