@@ -18,7 +18,7 @@ function LogInForm({ func, loading, title }) {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form id="logInForm" onSubmit={handleSubmit(onSubmit)}>
       <Stack sx={{ minWidth: "500px" }} spacing={2} mt={2}>
         <h1>{title}</h1>
         <Controller
