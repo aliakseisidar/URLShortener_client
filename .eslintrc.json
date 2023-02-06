@@ -23,6 +23,7 @@
   "rules": {
     "react/prop-types": "off",
     "no-unused-vars": "warn",
-    "wdio/no-pause": "warn"
+    "wdio/no-pause": "warn",
+    "mocha/max-top-level-suites": ["warn", { "limit": 2 }]
   }
 }
