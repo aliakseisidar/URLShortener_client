@@ -84,4 +84,4 @@ npm start
 
 ### Allure report sample
 
-![Allure Report](./allure_report.PNG)
+![Allure Report](allure_report.PNG)
