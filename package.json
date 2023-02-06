@@ -29,7 +29,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "wdio": "wdio run ./wdio.conf.js"
+    "test:all": "wdio run ./wdio.conf.js",
+    "test:singUp": "wdio run ./wdio.conf.js --spec ./test/specs/signUp.e2e.js",
+    "test:happyPath": "wdio run ./wdio.conf.js --spec ./test/specs/happyPath.e2e.js",
+    "test:suite1": "wdio run ./wdio.conf.js --suite suite1"
   },
   "eslintConfig": {
     "extends": [
