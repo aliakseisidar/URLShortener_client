@@ -10,6 +10,12 @@ _by Sidar Aliaksei_
 
 ---
 
+### Demo:
+
+https://user-images.githubusercontent.com/80822521/231766663-dc7bc9a1-b8c9-4bc7-bdc1-d25fc5604aac.mp4
+
+---
+
 To srart app:
 
 ```
