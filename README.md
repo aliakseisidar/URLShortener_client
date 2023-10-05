@@ -6,6 +6,7 @@
 
 _by Sidar Aliaksei_
 
+**_[e2e Autotests)](https://github.com/aliakseisidar/URLShortener_client/tree/autotests_e2e)_**
 **_[Back-end part (Node.js)](https://github.com/aliakseisidar/URLShortener_server)_**
 
 ---
