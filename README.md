@@ -12,29 +12,13 @@ _by Sidar Aliaksei_
 
 ---
 
-<<<<<<< HEAD
 #### Library used:
-=======
-### To srart app:
 
-```
-npm start
-```
-
-### To start tests:
-
-1. `npm run test:all`
-2. `npm run test:singUp`
-3. `npm run test:happyPath`
-4. `npm run test:suite1`
-
----
-
-### Library used:
->>>>>>> e3c9b42 (update README)
-
-- WebDriverIO + mocha
-- Allure Reporter
+- React Router Dom v.6
+- React Hook Form
+- React Infinite Scroll Component
+- Material UI
+- Axios
 - etc.
 
 ---
