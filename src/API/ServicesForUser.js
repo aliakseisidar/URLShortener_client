@@ -1,9 +1,10 @@
 import axios from "axios";
+import { baseURL } from "../config";
 
 export default class ServicesForUser {
   static async signIn(username, password) {
     const response = await axios.post(
-      "http://localhost:5000/auth/registration",
+      `${baseURL}/auth/registration`,
       {
         username,
         password,
@@ -13,7 +14,7 @@ export default class ServicesForUser {
   }
 
   static async logIn(username, password) {
-    const response = await axios.post("http://localhost:5000/auth/login", {
+    const response = await axios.post(`${baseURL}/auth/login`, {
       username,
       password,
     });

@@ -1,8 +1,9 @@
 import axios from "axios";
+import { baseURL } from "../config";
 
 export default class ServicesForAdmin {
   static async getUsers(offset = 0, token, searchparam = "", limit = 10) {
-    const response = await axios.get("http://localhost:5000/admin/users", {
+    const response = await axios.get(`${baseURL}/admin/users`, {
       headers: {
         authorization: `Bearer ${token}`,
         limit,
@@ -15,7 +16,7 @@ export default class ServicesForAdmin {
 
   static async updateUser(token, user, username, password, role) {
     const response = await axios.post(
-      "http://localhost:5000/admin/updateUser",
+      `${baseURL}/admin/updateUser`,
       { username, password, role },
       {
         params: { _id: user._id },
@@ -29,7 +30,7 @@ export default class ServicesForAdmin {
 
   static async deleteUser(_id, token) {
     const response = await axios.delete(
-      `http://localhost:5000/admin/deleteUser`,
+      `${baseURL}/admin/deleteUser`,
       {
         params: { _id },
         headers: {
@@ -42,7 +43,7 @@ export default class ServicesForAdmin {
 
   static async fetchURLsByUser(offset = 0, token, userId) {
     const response = await axios.get(
-      "http://localhost:5000/admin/fetchURLsByUser",
+      `${baseURL}/admin/fetchURLsByUser`,
       {
         headers: {
           authorization: `Bearer ${token}`,

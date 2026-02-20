@@ -1,8 +1,9 @@
 import axios from "axios";
+import { baseURL } from "../config";
 
 export default class Services {
   static async fetchURLs(offset = 0, token) {
-    const response = await axios.get("http://localhost:5000/url/fetchURLs", {
+    const response = await axios.get(`${baseURL}/url/fetchURLs`, {
       headers: {
         authorization: `Bearer ${token}`,
         limit: 10,
@@ -13,7 +14,7 @@ export default class Services {
   }
 
   static async searchURLs(offset = 0, token, tagsearchparam, titlesearchparam) {
-    const response = await axios.get("http://localhost:5000/url/searchURLs", {
+    const response = await axios.get(`${baseURL}/url/searchURLs`, {
       headers: {
         authorization: `Bearer ${token}`,
         limit: 10,
@@ -26,9 +27,9 @@ export default class Services {
   }
 
   static async fetchURL(param, token) {
-    const response = await axios.get("http://localhost:5000/url/fetchURL", {
+    const response = await axios.get(`${baseURL}/url/fetchURL`, {
       params: {
-        shortURL: `http://localhost:5000/${param}`,
+        shortURL: `${baseURL}/${param}`,
       },
       headers: {
         authorization: `Bearer ${token}`,
@@ -41,7 +42,7 @@ export default class Services {
     let tagsArr = [];
     if (tagsStr.length !== 0) tagsArr = tagsStr.split(" ");
     const response = await axios.post(
-      "http://localhost:5000/url/shortURL",
+      `${baseURL}/url/shortURL`,
       {
         originalURL: longURL,
         title: title,
@@ -57,7 +58,7 @@ export default class Services {
   }
 
   static async deleteURL(_id, token) {
-    const response = await axios.delete(`http://localhost:5000/url/deleteURL`, {
+    const response = await axios.delete(`${baseURL}/url/deleteURL`, {
       params: { _id },
       headers: {
         authorization: `Bearer ${token}`,
@@ -68,7 +69,7 @@ export default class Services {
 
   static async updateTags(url, token, tags) {
     const response = await axios.post(
-      "http://localhost:5000/url/updateTags",
+      `${baseURL}/url/updateTags`,
       {
         tags,
       },
